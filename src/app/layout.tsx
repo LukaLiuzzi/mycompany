@@ -1,4 +1,6 @@
 import './globals.css'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-background`}>{children}</body>
+      <body
+        className={`${inter.className} bg-background`}
+        suppressHydrationWarning
+      >
+        {children}
+      </body>
     </html>
   )
 }
