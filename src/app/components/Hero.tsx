@@ -1,25 +1,57 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
-const Hero = () => {
+interface HeroProps {
+  title: string
+  subTitle?: string
+  image: string
+  imageAlt: string
+  imageWidth?: number
+  imageHeight?: number
+  titlePosition?: 'left' | 'center' | 'right'
+  buttonHref?: string
+  buttonText?: string
+}
+
+const Hero = ({
+  title,
+  subTitle,
+  image,
+  imageAlt,
+  imageWidth = 1920,
+  imageHeight = 700,
+  titlePosition = 'center',
+  buttonHref,
+  buttonText
+}: HeroProps) => {
   return (
     <section className="relative">
-      <Image
-        src="/images/hero.jpg"
-        alt="Hero background"
-        width={1920}
-        height={700}
-        className="w-full h-full max-h-[700px] object-cover"
-      />
-      <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
-        <h2 className="text-2xl text-black text-center tracking-widest">
-          Especialistas en
+      <div className="opacity-30">
+        <Image
+          src={image}
+          alt={imageAlt}
+          width={imageWidth}
+          height={imageHeight}
+          className="w-full h-full max-h-[700px] object-cover"
+        />
+      </div>
+      <div
+        className={`absolute top-0 left-0 w-full h-full flex flex-col justify-${titlePosition} items-center`}
+      >
+        <h2 className="text-2xl text-paragraph text-center tracking-widest">
+          {subTitle}
         </h2>
-        <h1 className="text-5xl text-black font-bold text-center">
-          Desarrollo de software
+        <h1 className="text-5xl text-headline font-bold text-center">
+          {title}
         </h1>
-        <button className="bg-button text-buttonText text-xl font-bold px-6 py-2 rounded-full mt-4">
-          Conocer mas
-        </button>
+        {buttonHref !== undefined && buttonText !== undefined && (
+          <Link
+            href={buttonHref}
+            className="bg-button text-buttonText text-xl font-bold px-6 py-2 rounded-full mt-4"
+          >
+            {buttonText}
+          </Link>
+        )}
       </div>
     </section>
   )
