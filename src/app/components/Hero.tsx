@@ -19,7 +19,7 @@ const Hero = ({
   image,
   imageAlt,
   imageWidth = 1920,
-  imageHeight = 700,
+  imageHeight = 500,
   titlePosition = 'center',
   buttonHref,
   buttonText
@@ -27,13 +27,9 @@ const Hero = ({
   return (
     <section className="relative">
       <div className="opacity-30">
-        <Image
-          src={image}
-          alt={imageAlt}
-          width={imageWidth}
-          height={imageHeight}
-          className="w-full h-full max-h-[700px] object-cover"
-        />
+        <div className={`w-full h-[${imageHeight}px]`}>
+          <Image src={image} alt={imageAlt} fill className="object-cover" />
+        </div>
       </div>
       <div
         className={`absolute top-0 left-0 w-full h-full flex flex-col justify-${titlePosition} items-center`}
@@ -56,4 +52,5 @@ const Hero = ({
     </section>
   )
 }
+
 export default Hero
