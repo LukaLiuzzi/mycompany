@@ -16,7 +16,7 @@ export const carrousellSettings = {
   autoplaySpeed: 3000,
   responsive: [
     {
-      breakpoint: 900,
+      breakpoint: 1200,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
