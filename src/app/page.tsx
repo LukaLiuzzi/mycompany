@@ -27,6 +27,9 @@ export default function Home() {
           AnotherDescription="Nuestra red de Consultoría, esta conformado por profesionales especializados en el diseño, desarrollo y obtención de nuevas oportunidades de negocios para nuestros clientes."
           buttonHref="/about"
           buttonText="Ver mas"
+          image="/images/hero.jpg"
+          imageAlt="Hero background"
+          imagePosition="left"
         />
         <Carrousell
           title="Servicios Profesionales"
