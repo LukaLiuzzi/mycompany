@@ -9,7 +9,6 @@ import Image from 'next/image'
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   const pathname = usePathname()
-  console.log(pathname)
   const [active, setActive] = useState<string>(pathname)
 
   useEffect(() => {

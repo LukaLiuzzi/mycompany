@@ -1,6 +1,7 @@
 import AboutSection from './components/AboutSection'
 import Carrousell from './components/Carrousell'
 import ContactSection from './components/ContactSection'
+import Footer from './components/Footer'
 import Hero from './components/Hero'
 import InformationFrame from './components/InformationFrame'
 import Navbar from './components/Navbar'
@@ -40,6 +41,7 @@ export default function Home() {
         />
         <ContactSection />
       </main>
+      <Footer />
     </>
   )
 }
