@@ -36,29 +36,30 @@ export const carrousellSettings = {
 export const professionalServices = [
   {
     id: 1,
-    title: 'Paginas web',
+    title: 'Páginas web',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue mollis interdum.',
+      'Creamos una página web profesional, con un diseño moderno y atractivo, que destaque tu negocio ante la competencia para aumentar tus ventas.',
     icon: AiFillChrome
   },
   {
     id: 3,
     title: 'Sistemas web',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description:
+      'Desarrollamos software personalizado a tus necesidades para simplificar tus procesos y aumentar tu productividad.',
     icon: MdOutlineSettingsSystemDaydream
   },
   {
     id: 4,
     title: 'Aplicaciones moviles',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue mollis interdum.',
+      'Desarrollamos aplicaciones móviles para Android y iOS, practicas y fáciles de usar, que te permitan llegar a más clientes.',
     icon: AiFillApple
   },
   {
     id: 2,
     title: 'Diseño grafico',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue mollis interdum.',
+      'Hacemos diseños unicos para tu marca, creando una identidad visual para tu negocio.',
     icon: AiOutlineInsertRowLeft
   }
 ]
